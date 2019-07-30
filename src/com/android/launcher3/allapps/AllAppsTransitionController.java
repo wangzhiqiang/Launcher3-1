@@ -200,7 +200,7 @@ public class AllAppsTransitionController implements StateHandler, OnDeviceProfil
         boolean hasContent = (visibleElements & ALL_APPS_CONTENT) != 0;
 
         Interpolator allAppsFade = builder.getInterpolator(ANIM_ALL_APPS_FADE, LINEAR);
-        setter.setViewAlpha(mAppsView.getSearchView(), hasHeader ? 1 : 0, allAppsFade);
+//        setter.setViewAlpha(mAppsView.getSearchView(), hasHeader ? 1 : 0, allAppsFade);
         setter.setViewAlpha(mAppsView.getContentView(), hasContent ? 1 : 0, allAppsFade);
         setter.setViewAlpha(mAppsView.getScrollBar(), hasContent ? 1 : 0, allAppsFade);
         mAppsView.getFloatingHeaderView().setContentVisibility(hasHeaderExtra, hasContent, setter,
